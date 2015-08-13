@@ -22,6 +22,7 @@ The analysis() described in this code requires 8 parameters fil1 to fil8. Each o
 - fil6= "subject_train.txt"
 - fil7= "features.txt"
 - fil8= "activity_labels.txt"
+
 Each of these files are read into the following variables
 - VARIABLE=FILE READ
 - fXtest= "X_test.txt"
@@ -43,5 +44,5 @@ The labels are matched up for user friendly names in the following variables
 - The rS and rA variables containing the subject and activity labels are merged with the data in rX to form row labels
 - The rF variable containing the features labels is merged with the data in rX to form the column labels
 
-The rXms variab. les stores the labels matched for mean and standard deviation texts
+The rXms variable stores the labels matched for mean and standard deviation texts
 The rMS variables stores the subset of rX for the mean and standard deviation data and this variable is written to a text file as the final tidy data.
