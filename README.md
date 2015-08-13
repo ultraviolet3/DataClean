@@ -11,7 +11,11 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 run_analysis.R
 The run_analysis.R code performs the following;
-
+A.      The run_analysis.R requires the following libraries
+        - data.table
+        - dplyr
+        
+B.      The run_analysis.R will perform the following:
 1)	Checks if the data files exist in the working directory of the user
 
         a.	If the data directory “UCI HAR Dataset” exists then the code proceeds to step 2. 
