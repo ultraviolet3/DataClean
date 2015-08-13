@@ -8,37 +8,40 @@ Data Set Information:
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
-The dataset includes the following files:
-
-- 'README.txt'
-
-- 'features_info.txt': Shows information about the variables used on the feature vector.
-
-- 'features.txt': List of all features. This forms the column headings
-
-- 'activity_labels.txt': Links the class labels with their activity name. This forms the row labels.
-
-- 'train/X_train.txt': Training set.
-
-- 'train/y_train.txt': Training labels.
-
-- 'test/X_test.txt': Test set.
-
-- 'test/y_test.txt': Test labels.
-
-- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. This forms the row labels.
-
-- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. This forms the row labels.
-
-'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis.
-
-'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration.
-
-'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
-
 Objective
 To tidy the data-. this step includes loading and combining the test and train data sets. Add user friendly column and row labels for the data to form a complete and useful data set
 Extract the data for mean and standard deviation from the combined data set
 
+run_analysis.R
+The analysis() described in this code requires 8 parameters fil1 to fil8. Each of the points to a separate data file downloaded.
+- fil1= "X_test.txt"
+- fil2= "X_train.txt"
+- fil3= "y_test.txt"
+- fil4= "y_train.txt"
+- fil5= "subject_test.txt"
+- fil6= "subject_train.txt"
+- fil7= "features.txt"
+- fil8= "activity_labels.txt"
+Each of these files are read into the following variables
+- VARIABLE=FILE READ
+- fXtest= "X_test.txt"
+- fXtrain= "X_train.txt"
+- fAtest= "y_test.txt"
+- fAtrain= "y_train.txt"
+- fStest= "subject_test.txt"
+- fStrain= "subject_train.txt"
+- rF= "features.txt"
+- rAL= "activity_labels.txt"
 
+The test and train files are combined and stored in the following variables
+- rA= Activity data
+- rS= Subject data
+- rX= Features data
 
+The labels are matched up for user friendly names in the following variables
+- The activity labels are matched for user friendly text in rA
+- The rS and rA variables containing the subject and activity labels are merged with the data in rX to form row labels
+- The rF variable containing the features labels is merged with the data in rX to form the column labels
+
+The rXms variab. les stores the labels matched for mean and standard deviation texts
+The rMS variables stores the subset of rX for the mean and standard deviation data and this variable is written to a text file as the final tidy data.
