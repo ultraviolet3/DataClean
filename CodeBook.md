@@ -13,6 +13,11 @@ To tidy the data-. this step includes loading and combining the test and train d
 Extract the data for mean and standard deviation from the combined data set
 
 run_analysis.R
+
+The wd variables stores the working directory of the user.
+
+The url and fil variables store the URL from which the data file must be downloaded and the destination file it must be saved as.
+
 The analysis() described in this code requires 8 parameters fil1 to fil8. Each of the points to a separate data file downloaded.
 - fil1= "X_test.txt"
 - fil2= "X_train.txt"
