@@ -11,21 +11,39 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 
 run_analysis.R
 The run_analysis.R code performs the following;
+
 1)	Checks if the data files exist in the working directory of the user
+
         a.	If the data directory “UCI HAR Dataset” exists then the code proceeds to step 2. 
+
         b.	Else, 
+
                 i.	The code downloads the data file from the URL above.
+
                 ii.	Unzips the directory and files within in the working directory
+
 2)	Reads the following data files into separate tables
+
         a.	"X_test.txt"
+
         b.	"X_train.txt"
+
         c.	"y_test.txt"
+
         d.	"y_train.txt"
+
         e.	"subject_test.txt"
+
         f.	"subject_train.txt"
+
         g.	"features.txt"
+
         h.	"activity_labels.txt"
+
 3)	Combines relevant data together to form the full set of data from both test and train studies
+
 4)	Adds column and row names to the combined data
+
 5)	Extracts the data for mean and standard deviation from the combined set
+
 6)	Writes the data to a text file.
