@@ -1,5 +1,6 @@
 analysis<- function(fil1="X_test.txt",fil2="X_train.txt",fil3="y_test.txt",fil4="y_train.txt",fil5="subject_test.txt",fil6="subject_train.txt",fil7="features.txt",fil8="activity_labels.txt"){
   library(dplyr)
+  library(data.table)
 
 #Checking if data files exist
   wd=getwd()
